@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.gcgame.oa.mapper.StuUserMapper">
+	<resultMap id="StuUser_ResultMap" type="com.gcgame.oa.model.StuUser">
+		<result column="ID" property="ID" />
+		<result column="LOGIN_NAME" property="LOGINNAME" />
+		<result column="LOGIN_PASSWORD" property="LOGINPASSWORD" />
+		<result column="NAME" property="NAME" />
+		<result column="AGE" property="AGE" />
+		<result column="PHONE" property="PHONE" />
+		<result column="SCHOOL_ID" property="SCHOOLID" />
+		<result column="SCHOOL" property="SCHOOL" />
+		<result column="CLASS_ID" property="CLASSID" />
+		<result column="CLASS" property="CLASS" />
+		<result column="ADDRESS" property="ADDRESS" />
+		<result column="DELETED" property="DELETED" />
+	</resultMap>
+
+	<sql id="StuUser_Column_List">
+		ID,
+		LOGIN_NAME,
+		LOGIN_PASSWORD,
+		NAME,
+		AGE,
+		PHONE,
+		SCHOOL_ID,
+		SCHOOL,
+		CLASS_ID,
+		CLASS,
+		ADDRESS,
+		DELETED
+	</sql>
+	
+	<insert id="insert" parameterType="com.gcgame.oa.model.StuUser" useGeneratedKeys="true" keyProperty="id">
+		insert into stu_user
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="ID != null">
+					ID,
+			</if>
+			<if test="LOGINNAME != null">
+					LOGIN_NAME,
+			</if>
+			<if test="LOGINPASSWORD != null">
+					LOGIN_PASSWORD,
+			</if>
+			<if test="NAME != null">
+					NAME,
+			</if>
+			<if test="AGE != null">
+					AGE,
+			</if>
+			<if test="PHONE != null">
+					PHONE,
+			</if>
+			<if test="SCHOOLID != null">
+					SCHOOL_ID,
+			</if>
+			<if test="SCHOOL != null">
+					SCHOOL,
+			</if>
+			<if test="CLASSID != null">
+					CLASS_ID,
+			</if>
+			<if test="CLASS != null">
+					CLASS,
+			</if>
+			<if test="ADDRESS != null">
+					ADDRESS,
+			</if>
+			<if test="DELETED != null">
+					DELETED
+			</if>
+		</trim>
+		values <trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="ID != null">
+					#{ID},
+			</if>
+			<if test="LOGINNAME != null">
+					#{LOGINNAME},
+			</if>
+			<if test="LOGINPASSWORD != null">
+					#{LOGINPASSWORD},
+			</if>
+			<if test="NAME != null">
+					#{NAME},
+			</if>
+			<if test="AGE != null">
+					#{AGE},
+			</if>
+			<if test="PHONE != null">
+					#{PHONE},
+			</if>
+			<if test="SCHOOLID != null">
+					#{SCHOOLID},
+			</if>
+			<if test="SCHOOL != null">
+					#{SCHOOL},
+			</if>
+			<if test="CLASSID != null">
+					#{CLASSID},
+			</if>
+			<if test="CLASS != null">
+					#{CLASS},
+			</if>
+			<if test="ADDRESS != null">
+					#{ADDRESS},
+			</if>
+			<if test="DELETED != null">
+					#{DELETED}
+			</if>
+		</trim>
+	</insert>
+
+	<delete id="deleteById" parameterType="java.lang.Long">
+		delete from stu_user where id = #{id}
+	</delete>
+	
+	<delete id="deleteByProperty"  >
+		delete from stu_user where 
+			<choose>
+					<when test="property=='ID'">
+						ID = #{value}
+					</when>
+					<when test="property=='LOGINNAME'">
+						LOGIN_NAME = #{value}
+					</when>
+					<when test="property=='LOGINPASSWORD'">
+						LOGIN_PASSWORD = #{value}
+					</when>
+					<when test="property=='NAME'">
+						NAME = #{value}
+					</when>
+					<when test="property=='AGE'">
+						AGE = #{value}
+					</when>
+					<when test="property=='PHONE'">
+						PHONE = #{value}
+					</when>
+					<when test="property=='SCHOOLID'">
+						SCHOOL_ID = #{value}
+					</when>
+					<when test="property=='SCHOOL'">
+						SCHOOL = #{value}
+					</when>
+					<when test="property=='CLASSID'">
+						CLASS_ID = #{value}
+					</when>
+					<when test="property=='CLASS'">
+						CLASS = #{value}
+					</when>
+					<when test="property=='ADDRESS'">
+						ADDRESS = #{value}
+					</when>
+					<when test="property=='DELETED'">
+						DELETED = #{value}
+					</when>
+			 </choose>
+	</delete>
+	
+	<delete id="delete" >
+		delete from stu_user where id in
+		<foreach collection="ids" index="index" item="id" open="(" separator="," close=")">
+            #{id}
+         </foreach>
+	</delete>
+
+	<update id="update" parameterType="com.gcgame.oa.model.StuUser">
+		update stu_user
+			<set>
+				<if test="ID != null">
+					ID = #{ID},
+				</if>
+				<if test="LOGINNAME != null">
+					LOGIN_NAME = #{LOGINNAME},
+				</if>
+				<if test="LOGINPASSWORD != null">
+					LOGIN_PASSWORD = #{LOGINPASSWORD},
+				</if>
+				<if test="NAME != null">
+					NAME = #{NAME},
+				</if>
+				<if test="AGE != null">
+					AGE = #{AGE},
+				</if>
+				<if test="PHONE != null">
+					PHONE = #{PHONE},
+				</if>
+				<if test="SCHOOLID != null">
+					SCHOOL_ID = #{SCHOOLID},
+				</if>
+				<if test="SCHOOL != null">
+					SCHOOL = #{SCHOOL},
+				</if>
+				<if test="CLASSID != null">
+					CLASS_ID = #{CLASSID},
+				</if>
+				<if test="CLASS != null">
+					CLASS = #{CLASS},
+				</if>
+				<if test="ADDRESS != null">
+					ADDRESS = #{ADDRESS},
+				</if>
+				<if test="DELETED != null">
+					DELETED = #{DELETED}
+				</if>
+			</set>
+		where id = #{id}
+	</update>
+	
+	<update id="updateByProperty" >
+		update stu_user
+			set 
+		<choose>
+			<when test="property=='ID'">
+				ID = #{value}
+			</when>
+			<when test="property=='LOGINNAME'">
+				LOGIN_NAME = #{value}
+			</when>
+			<when test="property=='LOGINPASSWORD'">
+				LOGIN_PASSWORD = #{value}
+			</when>
+			<when test="property=='NAME'">
+				NAME = #{value}
+			</when>
+			<when test="property=='AGE'">
+				AGE = #{value}
+			</when>
+			<when test="property=='PHONE'">
+				PHONE = #{value}
+			</when>
+			<when test="property=='SCHOOLID'">
+				SCHOOL_ID = #{value}
+			</when>
+			<when test="property=='SCHOOL'">
+				SCHOOL = #{value}
+			</when>
+			<when test="property=='CLASSID'">
+				CLASS_ID = #{value}
+			</when>
+			<when test="property=='CLASS'">
+				CLASS = #{value}
+			</when>
+			<when test="property=='ADDRESS'">
+				ADDRESS = #{value}
+			</when>
+			<when test="property=='DELETED'">
+				DELETED = #{value}
+			</when>
+		 </choose>
+		where id = #{id}
+	</update>
+	
+	<select id="getById"  parameterType="java.lang.Long" resultMap="StuUser_ResultMap">
+		select
+			<include refid="StuUser_Column_List" />
+			from stu_user
+		where id = #{id}
+	</select>
+	
+	<select id="getByProperty" resultMap="StuUser_ResultMap" >
+		select
+			<include refid="StuUser_Column_List" />
+			from stu_user
+		where
+		<choose>
+			<when test="property=='ID'">
+				ID = #{value}
+			</when>
+			<when test="property=='LOGINNAME'">
+				LOGIN_NAME = #{value}
+			</when>
+			<when test="property=='LOGINPASSWORD'">
+				LOGIN_PASSWORD = #{value}
+			</when>
+			<when test="property=='NAME'">
+				NAME = #{value}
+			</when>
+			<when test="property=='AGE'">
+				AGE = #{value}
+			</when>
+			<when test="property=='PHONE'">
+				PHONE = #{value}
+			</when>
+			<when test="property=='SCHOOLID'">
+				SCHOOL_ID = #{value}
+			</when>
+			<when test="property=='SCHOOL'">
+				SCHOOL = #{value}
+			</when>
+			<when test="property=='CLASSID'">
+				CLASS_ID = #{value}
+			</when>
+			<when test="property=='CLASS'">
+				CLASS = #{value}
+			</when>
+			<when test="property=='ADDRESS'">
+				ADDRESS = #{value}
+			</when>
+			<when test="property=='DELETED'">
+				DELETED = #{value}
+			</when>
+		</choose>
+	</select>
+
+	<select id="getByExample" parameterType="com.gcgame.oa.model.StuUser" resultMap="StuUser_ResultMap" >
+		select
+			<include refid="StuUser_Column_List" />
+			from stu_user
+		  <where>
+			<if test="ID != null">
+				and ID = #{ID}
+			</if>
+			<if test="LOGINNAME != null">
+				and LOGIN_NAME = #{LOGINNAME}
+			</if>
+			<if test="LOGINPASSWORD != null">
+				and LOGIN_PASSWORD = #{LOGINPASSWORD}
+			</if>
+			<if test="NAME != null">
+				and NAME = #{NAME}
+			</if>
+			<if test="AGE != null">
+				and AGE = #{AGE}
+			</if>
+			<if test="PHONE != null">
+				and PHONE = #{PHONE}
+			</if>
+			<if test="SCHOOLID != null">
+				and SCHOOL_ID = #{SCHOOLID}
+			</if>
+			<if test="SCHOOL != null">
+				and SCHOOL = #{SCHOOL}
+			</if>
+			<if test="CLASSID != null">
+				and CLASS_ID = #{CLASSID}
+			</if>
+			<if test="CLASS != null">
+				and CLASS = #{CLASS}
+			</if>
+			<if test="ADDRESS != null">
+				and ADDRESS = #{ADDRESS}
+			</if>
+			<if test="DELETED != null">
+				and DELETED = #{DELETED}
+			</if>
+		 </where>
+			 
+	</select>
+
+	<select id="findAllByPage" resultMap="StuUser_ResultMap" >
+		select
+			<include refid="StuUser_Column_List" />
+		from stu_user
+	</select>
+	
+	<select id="findAll" resultMap="StuUser_ResultMap" >
+		select
+			<include refid="StuUser_Column_List" />
+		from stu_user
+	</select>
+	
+	<select id="findAllCount" resultMap="StuUser_ResultMap" >
+		select
+			count(id)
+		from stu_user
+	</select>
+
+	<select id="findStuUser"  resultMap="StuUser_ResultMap" >
+		select * from (
+			select
+			<if test="dataType==0">
+				<include refid="StuUser_Column_List" />
+			</if>
+			<if test="dataType==1">
+					id 
+			</if>
+				from stu_user
+			  <where>
+				<if test="min>0">
+				<![CDATA[  
+					and id < #{min}
+				]]>
+				</if>
+				<if test="max>0">
+				<![CDATA[ 
+					and id > #{max}
+					]]>
+				</if>
+				 
+			 </where>
+				 <if test="max lte 0">
+				<![CDATA[  
+					order by id desc
+				]]>
+				</if>
+				<if test="max>0">
+				<![CDATA[ 
+					order by id asc
+					]]>
+				</if>
+				<if test="pageSize>0">
+				<![CDATA[ 
+					limit 0 , #{pageSize}
+					]]>
+				</if>
+				) t order by id desc
+	</select>
+	
+	<select id="getStuUserByPage"  resultMap="StuUser_ResultMap" >
+			select
+				<include refid="StuUser_Column_List" />
+				from stu_user
+		 	order by id desc
+	</select>
+	
+	<select id="getStuUserCount"  resultType="int" >
+			select
+			 count(id)
+				from stu_user
+	</select>
+	
+	
+</mapper>

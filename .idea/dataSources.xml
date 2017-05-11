@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="10.10.2.223_sycwd" uuid="b87d0616-fbcf-4144-a15c-fa2235dc74f8">
+      <driver-ref>oracle</driver-ref>
+      <synchronize>true</synchronize>
+      <auto-commit>false</auto-commit>
+      <jdbc-driver>oracle.jdbc.OracleDriver</jdbc-driver>
+      <jdbc-url>jdbc:oracle:thin:@223.100.6.179:1521:BCCWD</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="112.65 zs" uuid="29c63b78-3640-4a32-858f-9b8351b4ba36">
+      <driver-ref>oracle</driver-ref>
+      <synchronize>true</synchronize>
+      <auto-commit>false</auto-commit>
+      <jdbc-driver>oracle.jdbc.OracleDriver</jdbc-driver>
+      <jdbc-url>jdbc:oracle:thin:@223.100.3.171:10004:SZSJ</jdbc-url>
+    </data-source>
+  </component>
+</project>
