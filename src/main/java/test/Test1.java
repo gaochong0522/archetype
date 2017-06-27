@@ -1,5 +1,6 @@
 package test;
 
+import Method.PDF.PDFUtils;
 import Method.ReflectTest;
 import model.Car;
 
@@ -10,12 +11,7 @@ import java.util.Date;
  */
 public class Test1 {
     public static void main(String[] args) {
-//        try {
-//            Car car = ReflectTest.initByDefaultConst();
-//            System.out.println(car.introduce());
-//        } catch (Throwable throwable) {
-//            throwable.printStackTrace();
-//        }
+        PDFUtils.makeWork("C:\\test\\test\\a.pdf");
 
     }
 }

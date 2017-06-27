@@ -75,6 +75,9 @@
           <element id="library" level="project" name="Maven: com.google.zxing:javase:3.2.1" />
           <element id="library" level="project" name="Maven: com.google.zxing:core:3.2.1" />
           <element id="library" level="project" name="Maven: com.beust:jcommander:1.48" />
+          <element id="library" level="project" name="Maven: org.apache.pdfbox:pdfbox:2.0.1" />
+          <element id="library" level="project" name="Maven: org.apache.pdfbox:fontbox:2.0.1" />
+          <element id="library" level="project" name="Maven: pdfbox:pdfbox-yanhui:1.0" />
         </element>
       </element>
       <element id="directory" name="META-INF">

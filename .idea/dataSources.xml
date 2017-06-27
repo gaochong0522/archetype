@@ -5,15 +5,20 @@
       <driver-ref>oracle</driver-ref>
       <synchronize>true</synchronize>
       <auto-commit>false</auto-commit>
-      <jdbc-driver>oracle.jdbc.OracleDriver</jdbc-driver>
+      <jdbc-driver>oracle.jdbc.driver.OracleDriver</jdbc-driver>
       <jdbc-url>jdbc:oracle:thin:@223.100.6.179:1521:BCCWD</jdbc-url>
     </data-source>
-    <data-source source="LOCAL" name="112.65 zs" uuid="29c63b78-3640-4a32-858f-9b8351b4ba36">
+    <data-source source="LOCAL" name="223.100.3.171" uuid="6062cf72-90a7-460c-94ab-92385b65d765">
       <driver-ref>oracle</driver-ref>
       <synchronize>true</synchronize>
-      <auto-commit>false</auto-commit>
-      <jdbc-driver>oracle.jdbc.OracleDriver</jdbc-driver>
+      <jdbc-driver>oracle.jdbc.driver.OracleDriver</jdbc-driver>
       <jdbc-url>jdbc:oracle:thin:@223.100.3.171:10004:SZSJ</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="223.100.6.179" uuid="49f8cb22-7603-46e0-bc7a-d6b139e475d0">
+      <driver-ref>oracle</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>oracle.jdbc.driver.OracleDriver</jdbc-driver>
+      <jdbc-url>jdbc:oracle:thin:@223.100.6.179:1521:BCCWD</jdbc-url>
     </data-source>
   </component>
 </project>
