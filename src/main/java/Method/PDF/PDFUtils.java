@@ -9,7 +9,7 @@ import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.text.PDFTextStripper;
 
 /**
- * Created by 高崇 on 2017/6/27.
+ * Created by gc on 2017/6/27.
  */
 public class PDFUtils {
     public static void makeWork(String name){

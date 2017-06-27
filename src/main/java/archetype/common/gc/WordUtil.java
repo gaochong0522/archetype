@@ -1,7 +1,7 @@
 package archetype.common.gc;
 
 /**
- * Created by 高崇 on 2017/5/8.
+ * Created by gc on 2017/5/8.
  */
 
 import java.io.ByteArrayInputStream;

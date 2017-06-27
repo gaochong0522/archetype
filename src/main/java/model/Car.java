@@ -1,7 +1,7 @@
 package model;
 
 /**
- * Created by 高崇 on 2017/5/4.
+ * Created by gc on 2017/5/4.
  */
 public class Car {
     private String brand;

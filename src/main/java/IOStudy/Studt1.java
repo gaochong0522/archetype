@@ -3,7 +3,7 @@ package IOStudy;
 import java.io.*;
 
 /**
- * Created by 高崇 on 2017/5/5.
+ * Created by gc on 2017/5/5.
  */
 public class Studt1 {
     public static void main(String[] args) {

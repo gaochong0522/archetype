@@ -7,7 +7,7 @@ import model.Car;
 import java.util.Date;
 
 /**
- * Created by 高崇 on 2017/5/4.
+ * Created by gc on 2017/5/4.
  */
 public class Test1 {
     public static void main(String[] args) {

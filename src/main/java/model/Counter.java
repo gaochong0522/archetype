@@ -1,7 +1,7 @@
 package model;
 
 /**
- * Created by 高崇 on 2017/6/15.
+ * Created by gc on 2017/6/15.
  */
 public class Counter {
         public volatile static int count = 0;

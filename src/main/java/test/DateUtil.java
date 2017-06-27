@@ -3,7 +3,7 @@ package test;
 import java.util.Date;
 
 /**
- * Created by 高崇 on 2017/5/5.
+ * Created by gc on 2017/5/5.
  */
 public class DateUtil {
     public static String dateDiff(Date startTime, Date endTime,
