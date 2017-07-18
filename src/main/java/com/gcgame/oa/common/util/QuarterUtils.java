@@ -21,7 +21,7 @@ public class QuarterUtils {
 	 *         下标2：季度内相对月份（1~3）
 	 * @author 刘旭 (LiuXu)
 	 * 
-	 *         Create time: 2017年2月22日下午5:32:40
+	 *         thinkinOO time: 2017年2月22日下午5:32:40
 	 */
 	public static int[] calculateQuarterAndRelativeMonth(Date date) {
 		Calendar cale = Calendar.getInstance();
@@ -45,7 +45,7 @@ public class QuarterUtils {
 	 * 
 	 * @author 刘旭 (LiuXu)
 	 * 
-	 *         Create time: 2017年2月23日下午1:09:46
+	 *         thinkinOO time: 2017年2月23日下午1:09:46
 	 */
 	public static int calculateQuarterDifference(Date startDate, Date endDate) {
 		int[] start = calculateQuarterAndRelativeMonth(startDate);
@@ -61,7 +61,7 @@ public class QuarterUtils {
 	 * 
 	 * @author 刘旭 (LiuXu)
 	 * 
-	 *         Create time: 2017年2月23日下午7:09:18
+	 *         thinkinOO time: 2017年2月23日下午7:09:18
 	 */
 	public static Date[] getQuarterStartAndEnd(int[] date) {
 		FastDateFormat fdf = FastDateFormat.getInstance("yyyy-MM-dd HH:mm:ss");
@@ -99,7 +99,7 @@ public class QuarterUtils {
 	 *         返回当前季度总数
 	 * @author 刘旭 (LiuXu)
 	 * 
-	 *         Create time: 2017年2月27日上午8:31:40
+	 *         thinkinOO time: 2017年2月27日上午8:31:40
 	 */
 	public static int getCurrQuarterSum(Date date) {
 		int[] yearAndQuarter = calculateQuarterAndRelativeMonth(date);

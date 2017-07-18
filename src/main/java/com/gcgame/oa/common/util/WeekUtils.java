@@ -27,7 +27,7 @@ public class WeekUtils {
 	 * 
 	 * @author 刘旭 (LiuXu)
 	 * 
-	 *         Create time: 2017年2月13日下午1:34:05
+	 *         thinkinOO time: 2017年2月13日下午1:34:05
 	 */
 	public static int calculateWeekByDate(int y, int m, int d) {
 		// 蔡勒公式：w=y+[y/4]+[c/4]-2c+[26(m+1)/10]+d-1
@@ -66,7 +66,7 @@ public class WeekUtils {
 	 * 
 	 * @author 刘旭 (LiuXu)
 	 * 
-	 *         Create time: 2017年2月19日上午11:12:03
+	 *         thinkinOO time: 2017年2月19日上午11:12:03
 	 */
 	public static int calculateWeekByDate(Date date) {
 		int[] intArray = formatDateToIntArray(date);
@@ -81,7 +81,7 @@ public class WeekUtils {
 	 * 
 	 * @author 刘旭 (LiuXu)
 	 * 
-	 *         Create time: 2017年2月19日上午9:19:08
+	 *         thinkinOO time: 2017年2月19日上午9:19:08
 	 */
 	public static int[] formatDateToIntArray(Date date) {
 		Calendar cale = Calendar.getInstance();
@@ -109,7 +109,7 @@ public class WeekUtils {
 	 * 
 	 * @author 刘旭 (LiuXu)
 	 * 
-	 *         Create time: 2017年2月19日上午11:13:25
+	 *         thinkinOO time: 2017年2月19日上午11:13:25
 	 */
 	public static Date calculateWeekInnerDate(Date referenceDate, int weekStart, int tagetWeek) {
 		// 计算出参考日期星期
@@ -144,7 +144,7 @@ public class WeekUtils {
 	 * 
 	 * @author 刘旭 (LiuXu)
 	 * 
-	 *         Create time: 2017年2月19日下午3:21:17
+	 *         thinkinOO time: 2017年2月19日下午3:21:17
 	 */
 	public static Date calculateDates(Date initialDate, int span) {
 		Calendar cale = Calendar.getInstance();

@@ -56,7 +56,7 @@ public class JPushUtils {
 	 * 
 	 * @author 刘旭 (LiuXu)
 	 * 
-	 *         Create time: 2017年3月12日上午10:04:45
+	 *         thinkinOO time: 2017年3月12日上午10:04:45
 	 */
 	public static boolean push(PushModule pushProductId, String[] targs, String pushMessage) {
 		try {

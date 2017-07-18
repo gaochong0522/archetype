@@ -18,7 +18,7 @@ public class StringHandling {
 	 * 
 	 * @author 刘旭 (LiuXu)
 	 * 
-	 *         Create time: 2017年2月17日下午2:53:11
+	 *         thinkinOO time: 2017年2月17日下午2:53:11
 	 */
 	@Deprecated
 	public static List<String> getMatchStrings(String targetStr, String regex) {

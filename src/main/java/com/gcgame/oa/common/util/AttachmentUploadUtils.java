@@ -50,7 +50,7 @@ public class AttachmentUploadUtils {
 	 * 
 	 * @author 刘旭 (LiuXu)
 	 * 
-	 *         Create time: 2017年2月16日下午5:03:53
+	 *         thinkinOO time: 2017年2月16日下午5:03:53
 	 */
 //	public static Map<String, String> uploadAttachment(MultipartHttpServletRequest request, String rootDir,
 //			String folder) throws IllegalStateException, IOException {
@@ -105,7 +105,7 @@ public class AttachmentUploadUtils {
 	 * 
 	 * @author 刘旭 (LiuXu)
 	 * 
-	 *         Create time: 2017年2月16日下午5:04:21
+	 *         thinkinOO time: 2017年2月16日下午5:04:21
 	 */
 //	public static boolean deleteAttachment(String url) {
 //		return FileUtils.deleteQuietly(getFile(url));
@@ -120,7 +120,7 @@ public class AttachmentUploadUtils {
 	 * 
 	 * @author 刘旭 (LiuXu)
 	 * 
-	 *         Create time: 2017年2月16日下午5:04:32
+	 *         thinkinOO time: 2017年2月16日下午5:04:32
 	 */
 //	public static File getFile(String url) {
 //		HttpServletRequest request = MyThreadLocalUtils.getRequest();
